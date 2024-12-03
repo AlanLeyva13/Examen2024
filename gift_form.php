@@ -17,7 +17,7 @@ if (!empty($giftIndices)) {
     $indicesArray = array_filter($indicesArray, 'is_numeric');
 
     // Pasar los índices al script de Python
-    $command = escapeshellcmd("py gift_selector.py  " . implode(' ', $indicesArray));
+    $command = escapeshellcmd("python3 gift_selector.py  " . implode(' ', $indicesArray));
     $output = shell_exec($command);
 
     // Procesar la respuesta de Python
